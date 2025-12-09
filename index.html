@@ -421,11 +421,9 @@ button:hover {
    OPTIONAL CONTAINER
 -------------------- */
 .container {
-  width: 100%;
-  max-width: 1200px; /* jitna desktop me chahiye */
-  padding: 0 20px;
-  box-sizing: border-box;
+  width: 1440px;
 }
+
 h1,h2{
   background: linear-gradient(135deg,var(--accent),#ff6b6b);
   -webkit-background-clip:text;
@@ -447,7 +445,28 @@ h1,h2{
   .buttons {
     justify-content: center;
   }
+}* {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 
   </style>
 </head>
