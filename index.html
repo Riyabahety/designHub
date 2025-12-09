@@ -315,6 +315,15 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   box-sizing: border-box;
 }
+	  body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
 
 body {
   background: var(--bg-dark);
@@ -412,59 +421,34 @@ button:hover {
    OPTIONAL CONTAINER
 -------------------- */
 .container {
-  width: 85%;
-  margin: auto;
-  padding: 60px 0;
+  width: 100%;
+  max-width: 1200px; /* jitna desktop me chahiye */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 h1,h2{
   background: linear-gradient(135deg,var(--accent),#ff6b6b);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-/* ---- Mobile Fix ---- */
 @media (max-width: 768px) {
-
-  body {
-    overflow-x: hidden;
+  .container {
+    padding: 0 16px;
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .card img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover;
-  }
-
-  .portfolio-section {
-    padding: 20px 10px;
-  }
-
-  .payment-section {
-    padding: 20px;
-    margin: 0;
-  }
-
-  .footer {
-    padding: 20px 10px;
+  h1, h2, h3 {
     text-align: center;
   }
 
-  .contact {
-    width: 100%;
-    margin: 0;
+  p {
     text-align: center;
   }
 
-  .portfolio-overlay {
-    width: 100% !important;
-    height: auto !important;
+  .buttons {
+    justify-content: center;
   }
 }
+
   </style>
 </head>
 <body>
