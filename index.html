@@ -421,6 +421,61 @@ h1,h2{
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
+	  /* ---- Mobile Responsive ---- */
+@media (max-width: 768px) {
+  
+  /* Global Fix */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section, .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* CONTACT SECTION */
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact .left,
+  .contact .right {
+    width: 100%;
+  }
+
+  /* PORTFOLIO GRID */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .portfolio-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* PAYMENT SECTION */
+  .payment {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .payment img {
+    width: 100%;
+    height: auto;
+  }
+}
   </style>
 </head>
 <body>
@@ -864,61 +919,7 @@ h1,h2{
         <div class="copyright">© 2025 Riya Bahety — All rights reserved.</div>
     </div>
 </footer>
-	/* ---- Mobile Responsive ---- */
-@media (max-width: 768px) {
-  
-  /* Global Fix */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-
-  section, .container {
-    width: 100%;
-    padding: 10px;
-  }
-
-  /* CONTACT SECTION */
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact .left,
-  .contact .right {
-    width: 100%;
-  }
-
-  /* PORTFOLIO GRID */
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .portfolio-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  /* PAYMENT SECTION */
-  .payment {
-    padding: 10px;
-    margin: 0;
-  }
-
-  .payment img {
-    width: 100%;
-    height: auto;
-  }
-}
+	
 <!-- FOOTER END -->
   <script>
     // year
