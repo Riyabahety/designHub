@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Riya Bahety — Premium Graphic Design | Portfolio</title>
   <meta name="description" content="Portfolio — Riya Bahety, Branding, Packaging, Illustration, Photoshop, Illustrator." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
       align-items:start;
     }
     .card{background:var(--glass);border-radius:14px;padding:0;overflow:hidden;cursor:pointer;transition:transform .22s}
-    .card img{width:110%;height:auto;object-fit:cover;display:block}
+    .card img{width:110%;height:220px;object-fit:cover;display:block}
     .card:hover{transform:translateY(-6px)}
     /* Full-screen portfolio overlay */
     .portfolio-overlay{
@@ -117,7 +117,7 @@
 
 .portfolio-item img {
   width: 90%;
-  height: auto;
+  height: 90%;
   object-fit: cover; /* fills container */
   border-radius: 12px; /* match the container */
 }
@@ -315,15 +315,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   box-sizing: border-box;
 }
-	  body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-}
-
 
 body {
   background: var(--bg-dark);
@@ -421,53 +412,15 @@ button:hover {
    OPTIONAL CONTAINER
 -------------------- */
 .container {
-  width: 1440px;
+  width: 85%;
+  margin: auto;
+  padding: 60px 0;
 }
-
 h1,h2{
   background: linear-gradient(135deg,var(--accent),#ff6b6b);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-@media (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  h1, h2, h3 {
-    text-align: center;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  .buttons {
-    justify-content: center;
-  }
-}* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-
   </style>
 </head>
 <body>
@@ -911,7 +864,61 @@ img {
         <div class="copyright">© 2025 Riya Bahety — All rights reserved.</div>
     </div>
 </footer>
-	
+	/* ---- Mobile Responsive ---- */
+@media (max-width: 768px) {
+  
+  /* Global Fix */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section, .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* CONTACT SECTION */
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact .left,
+  .contact .right {
+    width: 100%;
+  }
+
+  /* PORTFOLIO GRID */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .portfolio-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* PAYMENT SECTION */
+  .payment {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .payment img {
+    width: 100%;
+    height: auto;
+  }
+}
 <!-- FOOTER END -->
   <script>
     // year
