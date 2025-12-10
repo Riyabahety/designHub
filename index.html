@@ -421,6 +421,43 @@ h1,h2{
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
+	  /* Make layout responsive for mobile */
+.container,
+.hero,
+.main-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Center text for small screens */
+@media (max-width: 768px) {
+  .hero-text,
+  .hero {
+    text-align: center;
+  }
+
+  .tags,
+  .buttons {
+    justify-content: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    text-align: center;
+  }
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.hero-title {
+  font-size: 28px;
+  line-height: 1.3;
+  text-align: center;
+}
   </style>
 </head>
 <body>
