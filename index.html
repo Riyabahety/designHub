@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-<meta name="viewport" content="width=1024">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Riya Bahety — Premium Graphic Design | Portfolio</title>
   <meta name="description" content="Portfolio — Riya Bahety, Branding, Packaging, Illustration, Photoshop, Illustrator." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -1055,5 +1055,28 @@ body {
     }
   }
   </script>
+	<script>
+function openPortfolioOverlay() {
+  document.getElementById('portfolioOverlay').classList.add('open');
+}
+
+function closePortfolioOverlay() {
+  document.getElementById('portfolioOverlay').classList.remove('open');
+}
+
+function openLightbox(card) {
+  const imgSrc = card.querySelector("img").src;
+  const caption = card.dataset.caption || "";
+  const lb = document.getElementById("lightbox");
+  
+  lb.querySelector("img").src = imgSrc;
+  lb.querySelector(".caption").innerText = caption;
+  lb.classList.add("open");
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("open");
+}
+</script>
 </body>
 </html>
