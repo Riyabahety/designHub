@@ -488,7 +488,24 @@ body {
 	  html {
   -webkit-text-size-adjust: 100%;
 }
+	  /* FINAL MOBILE CENTER FIX */
+@media (max-width: 900px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center !important;
+  }
 
+  .hero-left {
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .hero-left * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
   </style>
 </head>
 <body>
