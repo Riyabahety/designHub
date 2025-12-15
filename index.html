@@ -772,7 +772,7 @@ body {
     <div class="portfolio-grid-full" id="portfolioGridFull">
 
         <!-- Portfolio preview -->
-        <section id="portfolio-full" class="portfolio-fullscreen">
+        <section id="portfolio" class="portfolio-fullscreen">
             <div class="portfolio-item">
                 <img src="PORTFOLIO\1.jpg" alt="Project 1">
             </div>
@@ -999,8 +999,7 @@ body {
       const data = new FormData(form);
       const subject = encodeURIComponent('New design inquiry from ' + (data.get('name') || ''));
       const body = encodeURIComponent('Email: '+(data.get('email')||'')+'\n\n'+(data.get('message')||''));
-     window.location.href =
-  `mailto:riadesignhub@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto:riadesignhub@gmail.com?subject=${subject}&body=${body};
       form.reset();
     }
   // Contact form functionality
