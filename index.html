@@ -989,35 +989,27 @@ body {
         closePortfolioOverlay();
       }
     });
+	  
+   function submitContact(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
 
-    // Contact form placeholder behavior
-    function submitContact(e){
-      e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
-      const subject = encodeURIComponent('New design inquiry from ' + (data.get('name') || ''));
-      const body = encodeURIComponent('Email: '+(data.get('email')||'')+'\n\n'+(data.get('message')||''));
-      window.location.href = mailto:riadesignhub@gmail.com?subject=${subject}&body=${body};
-      form.reset();
-    }
-  // Contact form functionality
-  function submitContact(e){
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
+  const name = data.get('name') || '';
+  const email = data.get('email') || '';
+  const message = data.get('message') || '';
 
-    const name = data.get('name') || '';
-    const email = data.get('email') || '';
-    const message = data.get('message') || '';
+  const subject = encodeURIComponent('New design inquiry from ' + name);
+  const body = encodeURIComponent(
+    'Name: ' + name +
+    '\nEmail: ' + email +
+    '\n\nMessage:\n' + message
+  );
 
-    if(!name || !email || !message){
-      alert('Please fill all fields before submitting.');
-      return;
-    }
-
-    const subject = encodeURIComponent('New design inquiry from ' + name);
-    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-
+  window.location.href = `mailto:riadesignhub@gmail.com?subject=${subject}&body=${body}`;
+  form.reset();
+}
+	  
     // Open default email client
     window.location.href = mailto:riadesignhub@gmail.com?subject=${subject}&body=${body};
 
