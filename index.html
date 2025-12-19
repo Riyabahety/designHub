@@ -59,9 +59,6 @@
     .portfolio-grid-full{
       display:grid;
       grid-template-columns: repeat(4, 1fr); /* wide layout for desktop */
-      gap:12px;
-	  grid-gap:12px;
-      align-items:start;
     }/* HERO animation */
 .hero-left h1 {
   animation: fadeUp 1s ease forwards;
@@ -107,21 +104,21 @@
 }
 
     .portfolio-item {
-  height: 100vh; /* full screen height */
-  width: 400%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin-bottom: 20px; /* gap between images */
-  border-radius: 12px; /* optional: rounded corners for a premium look */
+ height: max-content;
+    width: 400%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 12px;
 }
 
 .portfolio-item img {
-  width: 90%;
-  height: 90%;
-  object-fit: cover; /* fills container */
-  border-radius: 12px; /* match the container */
+  width: 95%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 /* Lightbox */
@@ -142,9 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
     /* responsive adjustments */
-    @media (max-width:1200px){
-      .portfolio-grid-full{grid-template-columns:repeat(3,1fr)}
-    }
+    
     @media (max-width:900px){
       .hero{grid-template-columns:1fr;}.frame{height:320px}
       .portfolio-grid-full{grid-template-columns:repeat(2,1fr)}
