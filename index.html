@@ -949,13 +949,6 @@ body {
       o.classList.remove('open');
       o.setAttribute('aria-hidden','true');
     }
-
-    // Also allow clicking the top nav "Portfolio" to open overlay instead of scroll:
-    document.getElementById('portfolioNav').addEventListener('click', function(e){
-      e.preventDefault();
-      openPortfolioOverlay();
-    });
-
     // Lightbox functions
     function openLightbox(el){
       // el may be .card or .item: find img inside
@@ -1009,16 +1002,6 @@ body {
   window.location.href = `mailto:riadesignhub@gmail.com?subject=${subject}&body=${body}`;
   form.reset();
 }
-	  
-    // Open default email client
-    window.location.href = mailto:riadesignhub@gmail.com?subject=${subject}&body=${body};
-
-    // Optional: confirmation alert
-    alert('Your email client will open to send the message.');
-
-    // Reset form
-    form.reset();
-  }
   // copy UPI ID
   document.getElementById('copyBtn').addEventListener('click', function(){
     const id = document.getElementById('upiId').textContent.trim();
@@ -1043,6 +1026,15 @@ body {
     if(e.target && e.target.id === 'qrLightbox'){
       document.getElementById('qrLightbox').classList.remove('open');
     }
+  }
+	  document.addEventListener('DOMContentLoaded', function () {
+
+  const portfolioNav = document.getElementById('portfolioNav');
+  if (portfolioNav) {
+    portfolioNav.addEventListener('click', function (e) {
+      e.preventDefault();
+      openPortfolioOverlay();
+    });
   }
   </script>
 </body>
