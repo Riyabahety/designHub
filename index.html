@@ -488,30 +488,7 @@ body {
 	  body {
   min-width: 1024px;
 }
-/* STICKY WHATSAPP BUTTON */
-.sticky-whatsapp{
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  width: 56px;
-  height: 56px;
-  background: #25D366;
-  color: #111;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  font-weight: 700;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  z-index: 9999;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
 
-.sticky-whatsapp:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.6);
-}
   </style>
 </head>
 <body>
@@ -560,7 +537,54 @@ body {
       </div>
     </div>
   </section>
-	
+
+  <!-- INLINE PORTFOLIO (preview) -->
+  <section id="portfolio" class="section" aria-label="Portfolio preview">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px">
+      <h2>Portfolio</h2>
+      <div>
+        <button class="chip" onclick="openPortfolioOverlay()">Open full portfolio</button>
+      </div>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioPreview">
+      <!-- Use your local images here; add more images as needed -->
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="C:\Users\riyab\Desktop\Untitled design.jpg" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="C:\Users\riyab\Desktop\Untitled-4.png" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIO\13.jpg" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIO\17.jpg" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIO\21.jpg" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIO\24.jpg" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIO\28.jpg" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIOOO\20.png" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIOOO\22.png" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIOOO\25.png" alt="Logo Folio">
+      </div>
+	  <div class="card" data-caption="Project — Logo Folio " onclick="openLightbox(this)">
+        <img src="PORTFOLIOOO\28.jpg" alt="Logo Folio">
+      </div>
+    </div>
+  </section>
+  
 <!-- SKILLS SECTION -->
 <section id="skills" class="section" aria-label="Skills">
   <h2>Skills</h2>
@@ -1011,14 +1035,6 @@ body {
     });
   }
  });
-	  <!-- Sticky WhatsApp Button -->
-<a href="https://wa.me/91XXXXXXXXXX" 
-   class="sticky-whatsapp" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-  💬
-</a>
-
   </script>
 </body>
 </html>
